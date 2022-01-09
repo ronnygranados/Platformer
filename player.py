@@ -15,6 +15,10 @@ class Player(pygame.sprite.Sprite):
         self.gravity = 0.8
         self.jump_speed = -16
 
+    def import_character_assets(self):
+        character_path = '../graphics/character/'
+        self.animations = {'idle': [], 'run': [], 'jump': [], 'fall':[]}
+
     def get_input(self):
         keys = pygame.key.get_pressed()
 
@@ -37,5 +41,5 @@ class Player(pygame.sprite.Sprite):
 
     def update(self):
         self.get_input()
-        self.rect.x += self.direction.x * self.speed
-        self.apply_gravity()
+        # self.rect.x += self.direction.x * self.speed
+        # self.apply_gravity()
