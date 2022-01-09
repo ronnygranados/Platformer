@@ -10,7 +10,7 @@ pygame.init()
 
 SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
 CLOCK = pygame.time.Clock()
-LEVEL = Level(level_map, SCREEN)
+level = Level(level_map, SCREEN)
 
 while True:
     for event in pygame.event.get():
@@ -19,6 +19,6 @@ while True:
             sys.exit()
 
     SCREEN.fill(BLACK)
-    LEVEL.run()
+    level.run()
     pygame.display.update()
     CLOCK.tick(60)
